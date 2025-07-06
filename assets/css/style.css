@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary: #00bcd4; 
+  --primary-hover: #0097a7;
+  --dark-primary: #111827; 
+  --dark-secondary: #1f2937; 
+  --light-text: #f3f4f6;
+  --medium-text: #9ca3af;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: "Poppins", sans-serif; background-color: var(--dark-primary); color: var(--light-text); line-height: 1.6; }
+
+/* Header */
+header { position: fixed; top: 0; left: 0; right: 0; background-color: rgba(31, 41, 55, 0.8); backdrop-filter: blur(10px); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1001; transition: background-color 0.3s ease; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+header nav ul { display: flex; list-style: none; }
+header nav ul li { margin-left: 30px; }
+header nav ul li a { color: var(--light-text); text-decoration: none; font-weight: 400; transition: color 0.3s ease; }
+header nav ul li a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero-section { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; }
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; color: #fff; }
+.hero-subtitle { font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; }
+.hero-desc { max-width: 600px; margin: 0 auto 30px auto; color: var(--medium-text); }
+.social-icons a { color: var(--medium-text); font-size: 1.5rem; margin: 0 15px; transition: color 0.3s, transform 0.3s; }
+.social-icons a:hover { color: var(--primary); transform: scale(1.2); }
+
+/* General Section Styling */
+main > section { padding: 80px 5%; }
+section:nth-of-type(even) { background-color: var(--dark-primary); }
+section:nth-of-type(odd) { background-color: var(--dark-secondary); }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
+h2 span { color: var(--primary); }
+
+/* About Section */
+.about-section { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; }
+.about-img { flex: 1; min-width: 250px; max-width: 300px; }
+.about-img img { width: 100%; border-radius: 50%; border: 5px solid var(--primary); }
+.about-content { flex: 2; min-width: 300px; max-width: 600px; }
+
+/* My Skills Section */
+.my-skills-section { padding-bottom: 100px; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto; }
+.skill-card { background-color: var(--dark-secondary); border-radius: 8px; padding: 30px 20px; text-align: center; border: 1px solid #374151; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.skill-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2); }
+.skill-card img { height: 50px; margin-bottom: 15px; object-fit: contain; }
+.skill-card h4 { font-size: 1rem; font-weight: 400; color: var(--light-text); }
+
+/* Projects Section */
+.projects-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card-box { background-color: var(--dark-primary); padding: 30px; border-radius: 8px; border: 1px solid #374151; display: flex; flex-direction: column; }
+.project-card-box h4 { font-size: 1.2rem; color: var(--primary); margin-bottom: 10px; }
+.project-card-box p { color: var(--medium-text); margin-bottom: 20px; flex-grow: 1; }
+.btn-project { color: var(--primary); text-decoration: none; font-weight: 600; align-self: flex-start; }
+
+/* Spatial Tools Section */
+#map { width: 100%; height: 550px; border-radius: 8px; z-index: 0; }
+.map-buttons { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+.btn.btn-primary { background-color: var(--primary); color: var(--dark-primary); font-weight: 600; border-radius: 5px; padding: 12px 25px; text-decoration: none; border: none; cursor: pointer; }
+.btn.btn-primary:hover { background-color: var(--primary-hover); }
+
+/* Contact Section */
+.contact-section { text-align: center; }
+.contact-section p { max-width: 500px; margin: 0 auto 30px auto; color: var(--medium-text); }
+#contact-form { max-width: 600px; margin: 0 auto; }
+#contact-form input, #contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #374151; background-color: var(--dark-secondary); color: var(--light-text); font-family: "Poppins", sans-serif; }
+#contact-form button { }
+
+/* Footer */
+footer { text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #374151; color: var(--medium-text); }
+
+/* Leaflet Draw styles override */
+.leaflet-draw-toolbar a { background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/images/spritesheet.png'); background-size: 270px 30px; }
+
+/* Media Queries */
+@media(max-width: 768px) {
+  header { flex-direction: column; padding: 15px; }
+  header nav ul { margin-top: 15px; }
+  header nav ul li { margin: 0 10px; }
+  .hero-section h1 { font-size: 2.5rem; }
+  .about-section { flex-direction: column; }
+}

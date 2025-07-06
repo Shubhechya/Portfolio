@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhechya Palikhe - Portfolio</title>
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div><a href="#home" class="logo">Shubhechya</a></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#spatial-tools">Spatial Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1>Shubhechya Palikhe</h1>
+                <p class="hero-subtitle">Geomatics Engineering Student & Geospatial Enthusiast</p>
+                <p class="hero-desc">Exploring the intersection of spatial data, technology, and environmental solutions. Passionate about learning and applying new techniques to solve real-world problems.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shubhechya-palikhe-824272243" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/Subbu426" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shuvhechya" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+             <div class="about-img">
+                <img src="assets/img/profile.jpg" alt="Shubhechya Palikhe">
+            </div>
+            <div class="about-content">
+                <h2>About <span>Me</span></h2>
+                <p>I am Shubhechya Palikhe from Pokhara, currently pursuing my bachelor's degree in Geomatics Engineering at Kathmandu University. Expected to graduate in early 2026, I am passionate about the spatial domain, artificial intelligence, and learning new things. My current focus is on mastering HTML, CSS, JavaScript, and Python to properly utilize spatial data with different AI methods. Outside of academics, I enjoy reading and trying new things.</p>
+            </div>
+        </section>
+
+        <section class="my-skills-section" id="skills">
+            <h2>My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="assets/img/gis-logos.png" alt="ArcGIS and QGIS Logos">
+                    <h4>ArcGIS / QGIS</h4>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/img/photogrammetry.png" alt="Photogrammetry Drone Icon">
+                    <h4>Photogrammetry</h4>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/img/remote-sensing.png" alt="Remote Sensing Satellite Icon">
+                    <h4>Remote Sensing</h4>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/img/programming.jpg" alt="Programming Language Logos">
+                    <h4>Programming</h4>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/img/database.png" alt="PostgreSQL Database Icon">
+                    <h4>Database (Postgres)</h4>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/img/web-mapping.png" alt="Web Mapping Icon">
+                    <h4>Web Mapping</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2>My <span>Projects</span></h2>
+            <div class="projects-cards">
+                <div class="project-card-box">
+                    <h4>Landfill Site Selection</h4>
+                    <p>A project utilizing ArcGIS to determine suitable locations for landfill sites based on various spatial criteria.</p>
+                </div>
+                <div class="project-card-box">
+                    <h4>Evacuation Route Planning</h4>
+                    <p>Group project using QGIS Network Analysis tools to plan emergency evacuation routes for Helambu Rural Municipality.</p>
+                </div>
+                 <div class="project-card-box">
+                    <h4>Database Project</h4>
+                    <p>Determining the shortest route using pgRouting, PostGIS, and PostgreSQL, visualized in QGIS.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="spatial-tools-map-section" id="spatial-tools">
+            <h2>Spatial <span>Tools</span></h2>
+            <div id="map"></div>
+            <div class="map-buttons">
+                <button id="bufferBtn" class="btn btn-primary">Create Buffer (1km)</button>
+                <button id="measureBtn" class="btn btn-primary">Measure Distance</button>
+                <button id="areaBtn" class="btn btn-primary">Draw Polygon for Area</button>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Contact <span>Me</span></h2>
+            <p>Feel free to reach out via email or connect with me on social media.</p>
+            <a href="mailto:shubhechya.palikhe@gmail.com" class="btn-contact">shubhechya.palikhe@gmail.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shubhechya Palikhe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
